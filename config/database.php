@@ -71,7 +71,7 @@ return [
 //             'database' => env('DB_DATABASE', 'forge'),
 //             'username' => env('DB_USERNAME', 'forge'),
 //             'password' => env('DB_PASSWORD', ''),
-            'url' => $DATABASE_URL['host'],
+//             'url' => $DATABASE_URL['host'],
             'host'     => $DATABASE_URL["host"],
             'port'     => $DATABASE_URL["port"],
             'database' => substr($url["path"], 1),
