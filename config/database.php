@@ -74,7 +74,7 @@ return [
 //             'url' => $DATABASE_URL['host'],
             'host'     => $DATABASE_URL["host"],
             'port'     => $DATABASE_URL["port"],
-            'database' => substr($url["path"], 1),
+            'database' => substr($DATABASE_URL["path"], 1),
             'username' => $DATABASE_URL["user"],
             'password' => $DATABASE_URL["pass"],
             'charset' => 'utf8',
