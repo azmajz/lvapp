@@ -22,6 +22,8 @@ class StoreImageController extends Controller
       'user_name'  => 'required',
       'user_image' => 'required|image|max:2048'
      ]);
+        
+      dd($request);
 
      $image_file = $request->user_image;
 
