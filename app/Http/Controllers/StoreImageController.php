@@ -35,9 +35,9 @@ class StoreImageController extends Controller
       'user_name'  => $request->user_name,
       'user_image' => $image
      );
-
+  dd($form_data);
      StoreImage::create($form_data);
-//   dd($form_data);
+
      return redirect()->back()->with('success', 'Image store in database successfully');
     }
 
