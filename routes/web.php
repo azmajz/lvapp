@@ -3,6 +3,7 @@
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\PostsController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\StoreImageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -46,3 +47,8 @@ Route::resource('posts',PostsController::class);
 // Route::get('/posts/edit/{id}',[PostsController::class,'edit']);
 // Route::put('/posts/edit/{id}',[PostsController::class,'update']);
 // Route::delete('/posts/{id}',[PostsController::class,'delete']);
+
+
+Route::get('store_image', [StoreImageController::class,'index']);
+Route::post('store_image/insert_image', [StoreImageController::class,'insert_image']);
+Route::get('store_image/fetch_image/{id}', [StoreImageController::class,'fetch_image']);
