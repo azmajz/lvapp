@@ -45,7 +45,7 @@ class StoreImageController extends Controller
     {
      $image = StoreImage::findOrFail($image_id);
 
-     $image_file = Image::make($image->user_image);
+     $image_file = Image::make(utf8_decode($image->user_image));
 
      $response = Response::make($image_file->encode('jpeg'));
 
