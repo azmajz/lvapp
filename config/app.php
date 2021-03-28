@@ -26,8 +26,7 @@ return [
     |
     */
 
-    'env' => env('APP_ENV', 'production'),
-
+    'env' => env('APP_ENV', 'development'),
     /*
     |--------------------------------------------------------------------------
     | Application Debug Mode
@@ -39,7 +38,8 @@ return [
     |
     */
 
-    'debug' => (bool) env('APP_DEBUG', false),
+    'debug' => (bool) env('APP_DEBUG', true),
+    'key' => env('APP_KEY', 'SomeRandosmStringSomeRandomString'),
 
     /*
     |--------------------------------------------------------------------------
