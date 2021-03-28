@@ -33,7 +33,7 @@ class StoreImageController extends Controller
 
      $form_data = array(
       'user_name'  => $request->user_name,
-      'user_image' => $image
+      'user_image' => utf8_encode($image)
      );
   dd($form_data);
      StoreImage::create($form_data);
