@@ -23,7 +23,7 @@ class StoreImageController extends Controller
       'user_image' => 'required|image|max:2048'
      ]);
         
-      dd($request);
+    
 
      $image_file = $request->user_image;
 
@@ -37,7 +37,7 @@ class StoreImageController extends Controller
      );
 
      StoreImage::create($form_data);
-
+  dd($form_data);
      return redirect()->back()->with('success', 'Image store in database successfully');
     }
 
