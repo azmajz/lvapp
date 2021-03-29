@@ -45,7 +45,7 @@ class StoreImageController extends Controller
     {
      $image = StoreImage::findOrFail($image_id);
 // dd($image->user_image);
-     $image_file = Image::make(pg_unescape_bytea($image->user_image));
+     $image_file = Image::make(pg_escape_bytea($image->user_image));
 
      $response = Response::make($image_file->encode('jpeg'));
 
