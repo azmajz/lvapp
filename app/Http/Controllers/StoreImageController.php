@@ -33,7 +33,7 @@ class StoreImageController extends Controller
 
      $form_data = array(
       'user_name'  => $request->user_name,
-      'user_image' => base64_encode((string) $image)
+      'user_image' => pg_escape_bytea($image)
      );
 //   dd($form_data);
      StoreImage::create($form_data);
