@@ -18,7 +18,7 @@
             @foreach($posts as $post)
                 <tr>
                     <td class="text-center">
-                     <img src="/images/{{$post->cover_image}}" style="width:50px">
+                    <img src="data:image/jpeg;base64,{{ base64_encode($post->cover_image) }}" style="width:50px"/>
                     </td>
                     <td>{{$post->title}}</td>
                     <td>
