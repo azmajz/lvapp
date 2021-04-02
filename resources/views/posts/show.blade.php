@@ -11,7 +11,7 @@
                     {{-- <img src="/images/{{$post->cover_image}}" class="img-fluid"> --}}
                     <img src="data:image/jpeg;base64,{{ base64_encode($post->cover_image) }}" class="img-fluid"/>
                 </div>
-                <p class="card-text">{{$post->body}}</p>
+                <pre class="card-text">{{$post->body}}</pre>
                 <hr>
                 <small class="text-muted float-right">
                     Posted on - {{date('d/M/Y', strtotime($post->created_at))}}
