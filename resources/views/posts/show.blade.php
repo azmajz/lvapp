@@ -8,7 +8,8 @@
             <div class="card-body">
                 <h2 class="card-title text-primary">{{$post->title}}</h2>
                 <div class="text-center">
-                    <img src="/images/{{$post->cover_image}}" class="img-fluid">
+                    {{-- <img src="/images/{{$post->cover_image}}" class="img-fluid"> --}}
+                    <img src="data:image/jpeg;base64,{{ base64_encode($post->cover_image) }}" class="img-fluid"/>
                 </div>
                 <p class="card-text">{{$post->body}}</p>
                 <hr>
