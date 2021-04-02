@@ -33,9 +33,9 @@ class StoreImageController extends Controller
 
      $form_data = array(
       'user_name'  => $request->user_name,
-      'user_image' => pg_escape_bytea($image)
+      'user_image' => $image
      );
-//   dd($form_data);
+
      StoreImage::create($form_data);
 
      return redirect()->back()->with('success', 'Image store in database successfully');
@@ -44,7 +44,7 @@ class StoreImageController extends Controller
     function fetch_image($image_id)
     {
      $image = StoreImage::findOrFail($image_id);
-// dd($image->user_image);
+
      $image_file = Image::make($image->user_image);
 
      $response = Response::make($image_file->encode('jpeg'));
